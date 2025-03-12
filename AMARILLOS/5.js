@@ -1,25 +1,28 @@
-let E = true;
-let NB = 75;
+let E = true; // Variable que indica si el computador está prendido
+let NB = 75; // Nivel de batería del computador
 
-if (E) {
+// Comenzamos el bucle do while
+do {
+    // Verificamos si el computador está prendido
+    if (E) {
+        console.log("El computador está prendido.");
 
-    console.log("El computador esta prendido.");
-
-    if (NB === 100){
-
-        console.log("La bateria esta totalmente cargada.");
-
-    } else if (NB > 20 && NB < 100){
-        
-        console.log("La bateria esta en buen estado.");
-
-    } else if (NB <= 20) {
-
-        console.log("La bateria esta baja, conectelo a la corriente.");
-
-    } else {
-
-        console.log("Encienda su computador.");
+        // Verificamos el nivel de batería
+        if (NB === 100) {
+            console.log("La batería está totalmente cargada.");
+        } 
+        // Evaluamos si la batería está en buen estado
+        else if (NB > 20 && NB < 100) {
+            console.log("La batería está en buen estado.");
+        } 
+        // Evaluamos si la batería está baja
+        else if (NB <= 20) {
+            console.log("La batería está baja, conéctelo a la corriente.");
+        } 
+        // Estado desconocido
+        else {
+            console.log("Encienda su computador.");
+        }
     }
-
-}
+// La condición del bucle es false para asegurarnos de que el bucle se ejecute solo una vez
+} while (false);
